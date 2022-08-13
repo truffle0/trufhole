@@ -58,14 +58,8 @@ src_install() {
 	cp -R "${S}/discord"/* "${D}/opt/discord" || die "Install failed!"
 
 	dosym "/opt/discord/Discord" "/usr/bin/discord"
-<<<<<<< HEAD
 	domenu "${S}/discord.desktop"
 	doicon "${S}/discord/discord.png"
-=======
-	domenu "discord.desktop"
-	doicon "discord.png"
->>>>>>> cbe20350b2056be323b8afa0f735dd3c6aaa9988
-}
 
 pkg_postinst() {
 	if pgrep -i Discord ; then
