@@ -71,7 +71,7 @@ RDEPEND="
         sys-power/powertop
         sys-power/intel-undervolt
         sys-apps/lm-sensors
-        sys-apps/ipmi-utils
+        sys-apps/ipmiutil
         sys-power/iasl
         sys-power/cpupower
     )
