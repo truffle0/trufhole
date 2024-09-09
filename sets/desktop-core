@@ -20,7 +20,6 @@ net-misc/yt-dlp
 
 # Socials & Gaming
 net-irc/hexchat
-net-im/skypeforlinux
 app-misc/piper
 
 # Web
@@ -52,6 +51,3 @@ media-fonts/noto
 media-fonts/quivira
 media-fonts/stix-fonts
 media-fonts/ubuntu-font-family
-
-# Settings
-x11-misc/qt5ct
