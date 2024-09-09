@@ -5,8 +5,8 @@ EAPI=7
 
 inherit git-r3 autotools
 
-DESCRIPTION=""
-HOMEPAGE=""
+DESCRIPTION="Graphical desktop application launcher for Gnome"
+HOMEPAGE="http://schneegans.github.io/gnome-pie"
 RESTRICT="mirror"
 
 EGIT_REPO_URI="https://github.com/Schneegans/Gnome-Pie.git"
@@ -31,7 +31,7 @@ BDEPEND="
 
 src_prepare() {
 	default
-	
+
 	# Compilation error, caused by a public constructor in an abstract class.
 	# There's a chance this error is dependent on the ebuild author's installed version of VALA,
 	# but this generalisation removes that error and makes it possible to compile.
@@ -48,7 +48,7 @@ src_configure() {
 
 src_compile() {
 	mkdir ${S}/build
-	
+
 	# Run cmake with valac executables parsed from /usr/bin/, since gnome-pie struggles to find any that don't have the exact name "/usr/bin/valac"
 	cmake -B ${S}/build ${S} -DVALA_EXECUTABLE=$(find /usr/bin/ -name "valac*" -printf "%p," | sed s/,$//) || die "CMake failed!"
 
