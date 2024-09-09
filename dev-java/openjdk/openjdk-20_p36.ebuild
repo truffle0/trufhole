@@ -9,7 +9,7 @@ inherit check-reqs eapi8-dosym flag-o-matic java-pkg-2 java-vm-2 multiprocessing
 ARM64_XPAK="17.0.2_p8" # musl bootstrap install
 PPC64_XPAK="17.0.1_p12" # big-endian bootstrap tarball
 RISCV_XPAK="17.0.3_p7"
-X86_XPAK="17.0.1_p12"
+X86_XPAK="20_p36"
 
 # Usage: bootstrap_uri <keyword> <version> [extracond]
 # Example: $(bootstrap_uri ppc64 17.0.1_p12 big-endian)
