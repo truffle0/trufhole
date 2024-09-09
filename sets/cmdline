@@ -1,13 +1,8 @@
-# Authentication and Organisation
+# Authentication
 app-admin/sudo
-app-misc/screen
-sys-apps/busybox
 
-# Shell & Editor
-app-shells/zsh
-app-shells/zsh-completions
-app-shells/gentoo-zsh-completions
-app-editors/vim
+# Preferred Shell Stuff
+@shellset
 
 # Extended Utilities
 www-client/links
@@ -40,7 +35,6 @@ sys-process/bashtop
 # Special tools
 sys-apps/i2c-tools
 sys-apps/flashrom
-sys-power/powertop
 
 # System Utils
 sys-power/powertop

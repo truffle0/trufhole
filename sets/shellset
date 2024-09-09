@@ -1,0 +1,13 @@
+# Shell
+app-shells/zsh
+app-shells/zsh-completions
+app-shells/gentoo-zsh-completions
+
+# Editor
+app-editors/vim
+
+# Mux
+app-misc/tmux
+
+# Literally everything
+sys-apps/busybox[static]
