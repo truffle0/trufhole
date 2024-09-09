@@ -33,6 +33,7 @@ sys-apps/moreutils
 
 # Archiving
 app-arch/wimlib
+app-arch/unrar
 
 # Tools & Info
 sys-apps/usbutils
