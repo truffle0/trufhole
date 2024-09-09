@@ -53,7 +53,7 @@ RDEPEND="
         sys-boot/plymouth-openrc-plugin
     )
     net? (
-        net-analyzer/maccchanger
+        net-analyzer/macchanger
         net-analyzer/nmap
         net-analyzer/traceroute
         net-firewall/nftables
