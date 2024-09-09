@@ -29,7 +29,6 @@ sys-apps/flatpak
 
 # Sound
 media-sound/pavucontrol
-media-sound/easyeffects
 media-libs/rnnoise
 media-libs/rubberband
 
