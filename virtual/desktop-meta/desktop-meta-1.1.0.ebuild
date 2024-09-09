@@ -51,13 +51,13 @@ RDEPEND="
   creating? (
     media-gfx/krita
     kde-apps/kdenlive
-    app-editor/atom
+    app-editors/atom
     media-gfx/blender
   )
   kicad? (
     sci-electronics/kicad
     sci-electronics/kicad-footprints
-    sci-electronics/kicad-packages
+    sci-electronics/kicad-packages3d
     sci-electronics/kicad-templates
     sci-electronics/kicad-symbols
     sci-electronics/kicad-templates
