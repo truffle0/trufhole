@@ -43,7 +43,7 @@ RDEPEND="
         dev-vcs/git
         net-ftp/tftp-hpa
         net-ftp/vsftpd
-        sys-apps/smartmonutils
+        sys-apps/smartmontools
     )
     boot? (
         sys-kernel/dracut
