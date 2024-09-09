@@ -38,12 +38,15 @@ BDEPEND="
 	"
 
 src_prepare() {
-	if [[ ${ELIBC} == "musl" ]] ; then
-		eapply "${FILESDIR}/${P}-musl-basename.patch"
-	fi
+	[[ ${ELIBC} == "musl" ]] && eapply "${FILESDIR}/${P}-musl-basename.patch"
+	eapply_user
 }
 
 src_configure() {
+	# This is needed to get round an odd bug where meson doesn't
+	# add -lfts to the compiler cmdline
+	[[ ${ELIBC} == "musl" ]] && CFLAGS="${CFLAGS} -lfts"
+
 	local emesonargs=(
 		$(meson_feature man man-pages)
 	)

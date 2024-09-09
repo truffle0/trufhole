@@ -111,6 +111,9 @@ src_prepare() {
 	# bug 931256
 	use riscv && PATCHES+=( "${FILESDIR}"/${PN}-22.2.0-riscv.patch )
 
+	[[ ${ELIBC} == "musl" ]] && PATCHES+=( "${FILESDIR}/${P}-no-libatomic.patch" )
+
+
 	default
 }
 
