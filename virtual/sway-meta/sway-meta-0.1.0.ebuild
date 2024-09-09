@@ -17,7 +17,7 @@ RDEPEND="
   gui-libs/greetd
   gui-apps/tuigreet
   sys-apps/dbus
-  sys-apps/seatd
+  sys-auth/seatd
 
   x11-misc/dunst
   media-sound/playerctl
@@ -34,7 +34,6 @@ RDEPEND="
   gui-apps/slurp
   gui-apps/grim
 
-  gui-apps/wluma
   sys-apps/xdg-desktop-portal-gtk
   sys-apps/xdg-desktop-portal
   gui-libs/xdg-desktop-portal-wlr
