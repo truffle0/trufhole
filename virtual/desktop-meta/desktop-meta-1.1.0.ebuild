@@ -17,7 +17,6 @@ RDEPEND="
   office? (
     app-office/libreoffice
     media-gfx/gthumb
-    app-text/evince
     sci-calculators/qalculate-gtk
     net-print/hplip
     net-print/cups
@@ -30,7 +29,7 @@ RDEPEND="
     app-text/pdfarranger
     app-text/foliate
     app-editors/mousepad
-    app-misc/gn
+    app-misc/gnote
   )
   files? (
     app-arch/xarchiver
