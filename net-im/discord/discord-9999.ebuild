@@ -1,1 +1,1 @@
-discord-0.0.15.ebuild
+discord-0.0.19.ebuild
