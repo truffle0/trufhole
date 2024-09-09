@@ -67,7 +67,7 @@ RDEPEND="
     sci-visualization/labplot
     sci-calculators/qalculate-gtk
     net-analyzer/wireshark
-    net-analyzer/gnome-nettoolS
+    net-analyzer/gnome-nettool
     kde-plasma/ksysguard
   )
   sound? (
