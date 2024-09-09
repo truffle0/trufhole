@@ -1,0 +1,3 @@
+# This package fails to install all files for some unknown reason.
+# Masking until fixed
+=sys-config/rootscreen-1.0.0

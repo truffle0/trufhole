@@ -4,6 +4,7 @@
 EAPI=8
 
 DESCRIPTION="Basic openrc custom init script and environment modifications which add extra functionality and management for screen sessions"
+HOMEPAGE="https://trufhole/rootscreen"
 
 SLOT="0"
 KEYWORDS="amd64 ~amd64"
