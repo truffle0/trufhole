@@ -32,7 +32,7 @@ bootstrap_uri() {
 # you will see, for example, jdk-17.0.4.1-ga and jdk-17.0.4.1+1, both point
 # to exact same commit sha. we should always use the full version.
 # -ga tag is just for humans to easily identify General Availability release tag.
-MY_PV="${PV%_P*}"
+MY_PV="${PV%_p*}"
 #MY_PV="${PV%_p*}-ga"
 SLOT="${MY_PV%%[.+]*}"
 
@@ -43,7 +43,7 @@ SLOT="${MY_PV%%[.+]*}"
 DESCRIPTION="Open source implementation of the Java programming language"
 HOMEPAGE="https://openjdk.org"
 SRC_URI="
-	https://github.com/${PN}/jdk${SLOT}u/archive/refs/tags/jdk-${MY_PV}.tar.gz
+	https://github.com/${PN}/jdk${SLOT}u/archive/refs/tags/jdk-20+36.tar.gz
 		-> ${P}.tar.gz
 	!system-bootstrap? (
 		$(bootstrap_uri arm64 ${ARM64_XPAK} elibc_musl)
