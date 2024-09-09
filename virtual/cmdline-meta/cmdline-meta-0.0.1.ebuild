@@ -24,7 +24,7 @@ RDEPEND="
   dev-vcs/git
   dev-util/strace
   sys-devel/gdb
-  dev-utils/valgrind
+  dev-util/valgrind
   sys-devel/patch
 
   app-text/tree
