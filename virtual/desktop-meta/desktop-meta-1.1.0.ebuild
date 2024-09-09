@@ -7,7 +7,7 @@ DESCRIPTION="Set of WM independent desktop workstation tools"
 
 SLOT="0"
 KEYWORDS="amd64 ~amd64 ~arm"
-IUSE="+social +office +kicad +sound +files +science +fonts"
+IUSE="+social +office +kicad +sound +files +science +fonts +creating"
 
 RDEPEND="
   x11-misc/qt5ct
