@@ -6,7 +6,7 @@ EAPI=8
 DESCRIPTION="Set of WM independent desktop workstation tools"
 
 SLOT="0"
-KEYWORDS="amd64 ~amd64 ~arm"
+KEYWORDS="amd64 ~arm"
 IUSE="+office +cad +sound +files +social -gaming +science +net +fonts +creating -rgb -virtual-machine"
 
 RDEPEND="
@@ -14,7 +14,6 @@ RDEPEND="
   x11-misc/pcmanfm
   www-client/firefox
   app-editors/mousepad
-
   office? (
     app-office/libreoffice
     media-gfx/gthumb
@@ -30,9 +29,7 @@ RDEPEND="
     app-text/foliate
     app-misc/gnote
     mail-client/thunderbird
-    app-text/obsidian
   )
-
   files? (
     app-arch/xarchiver
     net-ftp/filezilla
@@ -42,16 +39,15 @@ RDEPEND="
   social? (
     net-irc/hexchat
     net-im/discord
-    net-im/zoom
     net-im/skypeforlinux
     media-sound/spotify
     app-crypt/gpa
     www-client/google-chrome
+    app-misc/piper
   )
   gaming? (
     games-util/lutris
     media-video/obs-studio
-    app-misc/piper
   )
   creating? (
     media-gfx/krita
@@ -73,7 +69,6 @@ RDEPEND="
     sci-visualization/gnuplot
     sci-visualization/labplot
     sci-calculators/qalculate-gtk
-    media-gfx/cura
   )
   net? (
     net-analyzer/wireshark
