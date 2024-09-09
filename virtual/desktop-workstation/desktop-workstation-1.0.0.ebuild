@@ -7,7 +7,7 @@ DESCRIPTION="Set of WM independent desktop workstation tools"
 
 SLOT="0"
 KEYWORDS="amd64 ~amd64 ~arm"
-IUSE="web office cad sound files gaming"
+IUSE="web office cad sound files"
 
 RDEPEND="
   office? (
@@ -39,4 +39,4 @@ RDEPEND="
   sound? (
     media-sound/pavucontrol
     media-sound/easyeffects
-  )
+  )"
