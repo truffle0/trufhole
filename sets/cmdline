@@ -1,0 +1,37 @@
+# Authentication and Organisation
+app-admin/sudo
+app-misc/screen
+
+# Special file interpretation
+media-gfx/imv
+media-video/mpv
+sci-visualization/gnuplot
+
+# Editors and File explorers
+app-misc/nnn
+app-editors/vim
+
+# Debugging and Parsing
+app-misc/binwalk
+dev-vcs/git
+dev-util/strace
+sys-devel/gdb
+dev-util/valgrind
+sys-devel/patch
+dev-util/uncrustify
+
+# Scripting and exploration
+app-text/tree
+sys-apps/which
+sys-apps/sed
+sys-apps/gawk
+app-misc/neofetch
+
+# Archiving
+app-arch/wimlib
+
+# Special tools
+sys-apps/i2c-tools
+sys-apps/flashrom
+www-client/links
+sys-power/powertop
