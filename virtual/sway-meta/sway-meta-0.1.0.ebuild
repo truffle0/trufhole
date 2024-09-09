@@ -11,25 +11,36 @@ IUSE=""
 
 RDEPEND="
   gui-wm/sway
+  gui-apps/swaylock
+  gui-apps/swayidle
 
   gui-libs/greetd
   gui-apps/tuigreet
+  sys-apps/dbus
+  sys-apps/seatd
 
   x11-misc/dunst
   media-sound/playerctl
-
   gui-apps/waybar
-  gui-apps/sfwbar
-  gui-apps/fuzzel
-  x11-misc/dmenu
 
-  lxde-base/lxappearance
   lxqt-base/lxqt-policykit
+  media-video/pipewire[pipewire-alsa,jack-sdk,sound-server]
+  media-sound/pavucontrol
+
+  gui-apps/wob
+  gui-apps/wofi
 
   gui-apps/swappy
   gui-apps/slurp
   gui-apps/grim
 
-  gui-apps/wob
-  gui-apps/wofi
-  gui-apps/gammastep"
+  gui-apps/wluma
+  sys-apps/xdg-desktop-portal-gtk
+  sys-apps/xdg-desktop-portal
+  gui-libs/xdg-desktop-portal-wlr
+
+  gui-apps/wf-recorder
+  gui-apps/wl-clipboard
+
+  x11-terms/alacritty
+  x11-misc/pcmanfm"
