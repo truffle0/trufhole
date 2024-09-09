@@ -3,6 +3,9 @@ app-shells/zsh
 app-shells/zsh-completions
 app-shells/gentoo-zsh-completions
 
+# Utilities
+app-shells/zoxide
+
 # Editor
 app-editors/vim
 
