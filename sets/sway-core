@@ -20,7 +20,7 @@ x11-misc/dunst
 
 # Sound
 media-video/pipewire[pipewire-alsa,jack-sdk,sound-server]
-media-sound/pauvcontrol
+media-sound/pavucontrol
 
 # Clipboard, Screenshots & Recorder
 gui-apps/swappy
@@ -32,7 +32,7 @@ gui-apps/wf-recorder
 # Desktop Portal
 sys-apps/xdg-desktop-portal-gtk
 sys-apps/xdg-desktop-portal
-sys-apps/xdg-desktop-portal-wlr
+gui-libs/xdg-desktop-portal-wlr
 app-misc/ddcutil
 
 # Basic Utilities

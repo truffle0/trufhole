@@ -8,7 +8,7 @@ app-text/evince
 app-text/pdfarranger
 app-text/foliate
 app-misc/gnote
-app-text/obsidian
+app-office/obsidian
 sci-calculators/qalculate-gtk
 
 # File Apps
@@ -51,7 +51,7 @@ media-fonts/hack
 media-fonts/noto-emoji
 media-fonts/noto
 media-fonts/quivira
-media-fonts/stix-font
+media-fonts/stix-fonts
 media-fonts/ubuntu-font-family
 
 # Settings
