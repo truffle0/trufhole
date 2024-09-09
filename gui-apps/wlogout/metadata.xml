@@ -1,0 +1,11 @@
+<pkgmetadata>
+    <upstream>
+        <remote-id type="github">ArtsyMacaw/wlogout</remote-id>
+    </upstream>
+    <use>
+        <flag name="bash-completions">Enable Bash completions for this package</flag>
+        <flag name="fish-completions">Enable Fish completions for this package</flag>
+        <flag name="zsh-completions">Enable Zsh completions for this package</flag>
+        <flag name="layershell">Enable layershell support</flag>
+    </use>
+</pkgmetadata>

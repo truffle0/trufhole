@@ -1,5 +1,7 @@
 # Authentication
 app-admin/sudo
+app-misc/tmux
+sys-apps/busybox
 
 # Preferred Shell Stuff
 @shellset

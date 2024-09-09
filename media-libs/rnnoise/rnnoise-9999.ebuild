@@ -12,10 +12,9 @@ RESTRICT="mirror"
 EGIT_REPO_URI="https://github.com/xiph/rnnoise.git"
 EGIT_BRANCH="master"
 
-LICENSE=""
+LICENSE="BSD"
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-
 
 DEPEND=""
 RDEPEND="${DEPEND}"

@@ -136,7 +136,7 @@ inherit cargo desktop
 DESCRIPTION="A GTK patchbay for pipewire"
 HOMEPAGE="https://gitlab.freedesktop.org/pipewire/helvum"
 SRC_URI="
-	https://gitlab.freedesktop.org/pipewire/helvum/-/archive/${PV}/${P}.tar.gz
+	https://gitlab.freedesktop.org/pipewire/helvum/-/archive/${PV}/${P}.tar.bz2
 	$(cargo_crate_uris)
 "
 
@@ -166,5 +166,7 @@ src_install() {
 	insinto /usr/share/icons/hicolor/symbolic/apps
 	doins data/icons/org.pipewire.Helvum-symbolic.svg
 
-	make_desktop_entry "${PN}" Helvum org.pipewire.Helvum "AudioVideo;Audio;Video;Midi;Settings;GNOME;GTK" "Terminal=false\nGenericName=Patchbay"
+	make_desktop_entry "${PN}" Helvum org.pipewire.Helvum \
+		"AudioVideo;Audio;Video;Midi;Settings;GNOME;GTK"\
+		"Terminal=false\nGenericName=Patchbay"
 }

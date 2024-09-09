@@ -19,5 +19,4 @@ fi
 
 LICENSE="MIT"
 SLOT="0"
-IUSE="test"
 RESTRICT="mirror"
