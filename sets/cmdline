@@ -19,7 +19,7 @@ www-client/links
 app-misc/binwalk
 dev-vcs/git
 dev-util/strace
-sys-devel/gdb
+dev-debug/gdb
 #dev-util/valgrind
 sys-devel/patch
 dev-util/uncrustify
