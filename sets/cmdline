@@ -1,37 +1,51 @@
 # Authentication and Organisation
 app-admin/sudo
 app-misc/screen
+sys-apps/busybox
 
-# Special file interpretation
+# Shell & Editor
+app-shells/zsh
+app-shells/zsh-completions
+app-shells/gentoo-zsh-completions
+app-editor/vim
+
+# Extended Utilities
 media-gfx/imv
 media-video/mpv
 sci-visualization/gnuplot
+www-client/links
 
-# Editors and File explorers
-app-misc/nnn
-app-editors/vim
-
-# Debugging and Parsing
+# Coding & Debugging
 app-misc/binwalk
 dev-vcs/git
 dev-util/strace
 sys-devel/gdb
-dev-util/valgrind
+#dev-util/valgrind
 sys-devel/patch
 dev-util/uncrustify
 
-# Scripting and exploration
+# Scripting & Parsing
 app-text/tree
 sys-apps/which
 sys-apps/sed
 sys-apps/gawk
-app-misc/neofetch
+sys-apps/moreutils
 
 # Archiving
 app-arch/wimlib
 
+# Tools & Info
+sys-apps/usbutils
+sys-apps/pciutils
+sys-apps/i2c-tools
+sys-process/bashtop
+
 # Special tools
 sys-apps/i2c-tools
 sys-apps/flashrom
-www-client/links
 sys-power/powertop
+
+# System Utils
+sys-power/powertop
+sys-power/lm-sensors
+sys-apps/ipmiutil

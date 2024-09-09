@@ -1,0 +1,31 @@
+# Core Filesystem Utils
+sys-fs/btrfs-progs
+sys-fs/dosfstools
+sys-fs/jfsutils
+sys-fs/reiserfsprogs
+sys-fs/xfsprogs
+sys-fs/e2fsprogs
+
+# Advanced Storage Utils
+net-fs/sshfs
+net-fs/samba
+sys-fs/lvm2
+net-fs/nft-utils
+sys-fs/mtd-utils
+sys-fs/cryptsetup
+sys-fs/quota
+net-ftp/vsftpd
+sys-apps/smartmontools
+sys-apps/hdparm
+
+# Foreign Filesystem Utils
+sys-fs/f2fs-tools
+sys-fs/udftools
+sys-fs/exfatprogs
+sys-fs/squashfs-tools
+
+# Forensics & Recovery
+app-forensics/foremost
+sys-fs/ext4magic
+sys-fs/safecopy
+sys-fs/extundelete

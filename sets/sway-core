@@ -1,0 +1,40 @@
+# Core Packages
+gui-wm/sway[-swaybar]
+gui-apps/swaylock
+gui-apps/swayidle
+gui-apps/swaybg
+
+# Login & Env
+gui-libs/greetd
+gui-apps/tuigreet
+sys-apps/dbus
+sys-auth/seatd
+lxqt-base/lxqt-policykit
+
+# Taskbar, Launcher, Notifications
+gui-apps/waybar
+media-sound/playerctl
+gui-apps/wofi
+gui-apps/wob
+x11-misc/dunst
+
+# Sound
+media-video/pipewire[pipewire-alsa,jack-sdk,sound-server]
+media-sound/pauvcontrol
+
+# Clipboard, Screenshots & Recorder
+gui-apps/swappy
+gui-apps/slurp
+gui-apps/grim
+gui-apps/wl-clipboard
+gui-apps/wf-recorder
+
+# Desktop Portal
+sys-apps/xdg-desktop-portal-gtk
+sys-apps/xdg-desktop-portal
+sys-apps/xdg-desktop-portal-wlr
+app-misc/ddcutil
+
+# Basic Utilities
+x11-terms/alacritty
+x11-misc/pcmanfm

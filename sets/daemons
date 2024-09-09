@@ -1,0 +1,4 @@
+# Basic System Daemons
+sys-process/cronie
+sys-process/at
+sys-power/thermald

@@ -1,0 +1,58 @@
+# Office Applications
+app-editors/mousepad
+app-office/libreoffice
+media-gfx/gthumb
+media-video/vlc
+gnome-extra/gnome-characters
+app-text/evince
+app-text/pdfarranger
+app-text/foliate
+app-misc/gnote
+app-text/obsidian
+sci-calculators/qalculate-gtk
+
+# File Apps
+x11-misc/pcmanfm
+app-arch/xarchiver
+net-ftp/filezilla
+net-p2p/transmission
+net-misc/yt-dlp
+
+# Socials & Gaming
+net-irc/hexchat
+net-im/discord
+net-im/skypeforlinux
+app-misc/piper
+
+# Web
+www-client/firefox
+
+# Sys & Net
+net-analyzer/wireshark
+net-analyzer/gnome-nettool
+gnome-extra/nm-applet
+kde-plasma/ksysguard
+
+# Sound
+media-sound/pavucontrol
+media-sound/easyeffects
+media-sound/gnome-sound-recorder
+media-libs/rnnoise
+media-libs/rubberband
+
+# Fonts
+media-fonts/cantarell
+media-fonts/corefonts
+media-fonts/croscorefonts
+media-fonts/crosextrafonts-carlito
+media-fonts/droid
+media-fonts/fontawesome
+media-fonts/hack
+media-fonts/noto-emoji
+media-fonts/noto
+media-fonts/quivira
+media-fonts/stix-font
+media-fonts/ubuntu-font-family
+
+# Settings
+x11-misc/qt5ct

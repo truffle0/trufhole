@@ -1,0 +1,27 @@
+# Creating, Editing, Coding
+media-gfx/krita
+kde-apps/kdenlive
+media-gfx/blender
+app-editors/vscode
+media-video/vlc
+
+# Science
+sci-visualization/gnuplot
+sci-visualization/labplot
+
+# Printing & Documents
+app-text/paperwork
+net-print/hplip
+media-gfx/sane
+media-gfx/sane-airscan
+
+# Web
+www-client/google-chrome
+mail-client/thunderbird
+
+# Gaming
+games-util/lutris
+media-video/obs-studio
+
+# Virtual Machines
+app-emulation/virt-manager
