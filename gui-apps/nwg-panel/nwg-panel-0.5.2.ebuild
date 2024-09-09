@@ -27,7 +27,12 @@ DEPEND="
 RDEPEND="${DEPEND}
 	$(python_gen_cond_dep 'dev-python/i3ipc[${PYTHON_USEDEP}]')
 	gui-libs/gtk-layer-shell
-"
+	dev-python/psutil
+	dev-light/light
+	gui-apps/wlr-randr
+	media-sound/pamixer
+	media-sound/pulseaudio
+	media-sound/playerctl"
 
 python_install() {
 	distutils-r1_python_install
