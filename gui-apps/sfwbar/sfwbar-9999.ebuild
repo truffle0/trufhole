@@ -5,8 +5,8 @@ EAPI=8
 
 inherit meson
 
-DESCRIPTION=""
-HOMEPAGE=""
+DESCRIPTION="Sway Floating Window Bar. A flexible taskbar for wayland compositors."
+HOMEPAGE="https://github.com/LBCrion/sfwbar"
 
 if [[ ${PV} == 9999 ]] ; then
 	inherit git-r3
