@@ -18,7 +18,7 @@ www-client/links
 # Coding & Debugging
 app-misc/binwalk
 dev-vcs/git
-dev-util/strace
+dev-debug/strace
 dev-debug/gdb
 #dev-util/valgrind
 sys-devel/patch
