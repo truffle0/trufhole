@@ -1,0 +1,41 @@
+diff --git a/src/config.c b/src/config.c
+index 52e14d8..e1af539 100644
+--- a/src/config.c
++++ b/src/config.c
+@@ -1,9 +1,14 @@
+ #include <ctype.h>
+ #include <errno.h>
++
++// Criminal hack to get around musl's current issues with basename
++#define basename _basename
++#include <string.h>
++#undef basename
++
+ #include <libgen.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <string.h>
+ #include <strings.h>
+ #include "tofi.h"
+ #include "color.h"
+diff --git a/src/history.c b/src/history.c
+index 3bd76fa..892a0ee 100644
+--- a/src/history.c
++++ b/src/history.c
+@@ -1,10 +1,15 @@
+ #include <errno.h>
+ #include <fcntl.h>
++
++// Criminal hack to get around musl's current issues with basename
++#define basename _basename
++#include <string.h>
++#undef basename
++
+ #include <libgen.h>
+ #include <stdbool.h>
+ #include <stdio.h>
+ #include <stdlib.h>
+-#include <string.h>
+ #include <sys/stat.h>
+ #include "history.h"
+ #include "log.h"
