@@ -66,7 +66,7 @@ RDEPEND="
     sci-electronics/kicad-symbols
     sci-electronics/kicad-templates
     media-gfx/openscad
-    medix-gfx/freecad
+    media-gfx/freecad
   )
   science? (
     sci-visualization/gnuplot
