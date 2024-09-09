@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+# Copyright 2021 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+name="Root Terminal Screen"
+description=""
+command=/usr/bin/screen
+command_args="-dmS terminal"
+start_stop_daemon_args="-m -p /run/rootscreen -d /root"
+
+depend() {
+	need elogind
+}
