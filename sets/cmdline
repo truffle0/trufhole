@@ -10,6 +10,7 @@ sys-apps/busybox
 >>>>>>> a0f9161 (changes to commandline sets)
 @shellset
 @netutils
+@fstools
 
 # Extended Utilities
 www-client/links
