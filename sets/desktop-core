@@ -8,7 +8,6 @@ app-office/obsidian
 sci-calculators/qalculate-gtk
 
 # File Apps
-x11-misc/pcmanfm
 app-arch/xarchiver
 net-p2p/transmission
 net-misc/yt-dlp

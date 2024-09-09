@@ -11,7 +11,6 @@ lxqt-base/lxqt-policykit
 x11-apps/xhost
 
 # Taskbar, Launcher, Notifications
-gui-apps/waybar
 media-sound/playerctl
 gui-apps/wob
 x11-misc/dunst
@@ -36,7 +35,6 @@ app-misc/ddcutil
 
 # Basic Utilities
 x11-terms/alacritty
-x11-misc/pcmanfm
 media-gfx/imv
 media-video/mpv
 gui-apps/wdisplays

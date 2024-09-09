@@ -20,7 +20,6 @@ app-misc/binwalk
 dev-vcs/git
 dev-debug/strace
 dev-debug/gdb
-#dev-util/valgrind
 sys-devel/patch
 dev-util/uncrustify
 

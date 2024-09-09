@@ -8,7 +8,6 @@ sys-fs/e2fsprogs
 
 # Advanced Storage Utils
 net-fs/sshfs
-net-fs/samba
 sys-fs/lvm2
 net-fs/nfs-utils
 sys-fs/mtd-utils
