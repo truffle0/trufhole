@@ -1,13 +1,3 @@
-<<<<<<< HEAD
-# Authentication
-app-admin/sudo
-app-misc/tmux
-sys-apps/busybox
-
-# Preferred Shell Stuff
-=======
-# Other sets
->>>>>>> a0f9161 (changes to commandline sets)
 @shellset
 @netutils
 @fstools
