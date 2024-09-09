@@ -18,7 +18,7 @@ DEPEND="
 	"
 RDEPEND="${DEPEND}"
 BDEPEND="
-	dev-util/pkgconf
+	virtual/pkgconfig
 	dev-util/meson
 	dev-util/ninja
 	"
