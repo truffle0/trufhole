@@ -38,3 +38,5 @@ app-misc/ddcutil
 # Basic Utilities
 x11-terms/alacritty
 x11-misc/pcmanfm
+media-gfx/imv
+media-video/mpv

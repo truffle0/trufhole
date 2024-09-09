@@ -10,8 +10,6 @@ app-shells/gentoo-zsh-completions
 app-editors/vim
 
 # Extended Utilities
-media-gfx/imv
-media-video/mpv
 www-client/links
 
 # Coding & Debugging
