@@ -19,6 +19,7 @@ RDEPEND="
   media-sound/playerctl
 
   gui-apps/waybar
+  gui-apps/sfwbar
   gui-apps/fuzzel
   x11-misc/dmenu
 
