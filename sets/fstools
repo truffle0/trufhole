@@ -23,9 +23,3 @@ sys-fs/udftools
 sys-fs/exfatprogs
 sys-fs/squashfs-tools
 sys-fs/ntfs3g
-
-# Forensics & Recovery
-app-forensics/foremost
-sys-fs/ext4magic
-sys-fs/safecopy
-sys-fs/extundelete

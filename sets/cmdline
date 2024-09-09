@@ -30,10 +30,6 @@ sys-apps/sed
 sys-apps/gawk
 sys-apps/moreutils
 
-# Archiving
-app-arch/wimlib
-app-arch/unrar
-
 # Tools & Info
 sys-apps/usbutils
 sys-apps/pciutils
