@@ -32,7 +32,7 @@ RDEPEND="
     app-editors/mousepad
     app-misc/gn
   )
-  files?
+  files? (
     app-arch/xarchiver
     net-ftp/filezilla
     net-p2p/transmission
