@@ -1,10 +1,10 @@
 # Office Applications
 app-editors/mousepad
-# media-gfx/gthumb
+#media-gfx/gthumb
 media-video/vlc
-# gnome-extra/gnome-characters
-# app-text/evince
-app-office/obsidian
+#gnome-extra/gnome-characters
+#app-text/evince
+#app-office/obsidian
 sci-calculators/qalculate-gtk
 
 # File Apps
@@ -16,7 +16,7 @@ net-p2p/transmission
 net-irc/hexchat
 
 # Web
-www-client/firefox
+#www-client/firefox
 
 # Sys & Net
 # net-analyzer/wireshark

@@ -2,7 +2,7 @@
 sys-fs/btrfs-progs
 sys-fs/dosfstools
 sys-fs/jfsutils
-sys-fs/reiserfsprogs
+#sys-fs/reiserfsprogs
 sys-fs/xfsprogs
 sys-fs/e2fsprogs
 

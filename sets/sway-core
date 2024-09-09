@@ -14,7 +14,7 @@ x11-apps/xhost
 media-sound/playerctl
 gui-apps/wob
 x11-misc/dunst
-gui-apps/tofi
+#gui-apps/tofi
 
 # Sound
 media-video/pipewire[pipewire-alsa,jack-sdk,sound-server]
@@ -25,7 +25,7 @@ gui-apps/swappy
 gui-apps/slurp
 gui-apps/grim
 gui-apps/wl-clipboard
-gui-apps/wf-recorder
+#gui-apps/wf-recorder
 
 # Desktop Portal
 sys-apps/xdg-desktop-portal-gtk
