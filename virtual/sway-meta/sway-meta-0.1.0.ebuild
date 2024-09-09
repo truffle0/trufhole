@@ -41,6 +41,7 @@ RDEPEND="
 
   gui-apps/wf-recorder
   gui-apps/wl-clipboard
+  gui-libs/wlrobs
 
   x11-terms/alacritty
   x11-misc/pcmanfm"
