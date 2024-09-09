@@ -14,6 +14,7 @@ RDEPEND="
   x11-misc/pcmanfm
   www-client/firefox
   app-editors/mousepad
+
   office? (
     app-office/libreoffice
     media-gfx/gthumb
@@ -29,7 +30,9 @@ RDEPEND="
     app-text/foliate
     app-misc/gnote
     mail-client/thunderbird
+    app-text/obsidian
   )
+
   files? (
     app-arch/xarchiver
     net-ftp/filezilla
@@ -44,13 +47,11 @@ RDEPEND="
     media-sound/spotify
     app-crypt/gpa
     www-client/google-chrome
-    app-misc/piper
   )
   gaming? (
     games-util/lutris
     media-video/obs-studio
-    dev-java/openjdk:11
-    dev-java/openjdk:17
+    app-misc/piper
   )
   creating? (
     media-gfx/krita
@@ -72,6 +73,7 @@ RDEPEND="
     sci-visualization/gnuplot
     sci-visualization/labplot
     sci-calculators/qalculate-gtk
+    media-gfx/cura
   )
   net? (
     net-analyzer/wireshark
