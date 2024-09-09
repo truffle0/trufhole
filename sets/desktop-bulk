@@ -2,8 +2,7 @@
 media-gfx/krita
 kde-apps/kdenlive
 media-gfx/blender
-# remove vscode in the mean time to consider upgrades
-#app-editors/vscode
+app-office/libreoffice
 media-video/vlc
 
 # Science

@@ -9,5 +9,8 @@ app-editors/vim
 # Mux
 app-misc/tmux
 
+# Authentication
+app-admin/sudo
+
 # Literally everything
-sys-apps/busybox[static]
+sys-apps/busybox

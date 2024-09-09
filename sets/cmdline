@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 # Authentication
 app-admin/sudo
 app-misc/tmux
 sys-apps/busybox
 
 # Preferred Shell Stuff
+=======
+# Other sets
+>>>>>>> a0f9161 (changes to commandline sets)
 @shellset
+@netutils
 
 # Extended Utilities
 www-client/links
@@ -41,4 +46,3 @@ sys-apps/flashrom
 # System Utils
 sys-power/powertop
 sys-apps/lm-sensors
-sys-apps/ipmiutil
