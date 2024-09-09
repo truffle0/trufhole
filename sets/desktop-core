@@ -1,16 +1,16 @@
 # Office Applications
 app-editors/mousepad
-media-gfx/gthumb
+# media-gfx/gthumb
 media-video/vlc
-gnome-extra/gnome-characters
-app-text/evince
+# gnome-extra/gnome-characters
+# app-text/evince
 app-office/obsidian
 sci-calculators/qalculate-gtk
 
 # File Apps
-app-arch/xarchiver
+# app-arch/xarchiver
 net-p2p/transmission
-net-misc/yt-dlp
+# net-misc/yt-dlp
 
 # Socials & Gaming
 net-irc/hexchat
@@ -19,7 +19,7 @@ net-irc/hexchat
 www-client/firefox
 
 # Sys & Net
-net-analyzer/wireshark
+# net-analyzer/wireshark
 gnome-extra/nm-applet
 net-misc/networkmanager
 
@@ -28,8 +28,8 @@ sys-apps/flatpak
 
 # Sound
 media-sound/pavucontrol
-media-libs/rnnoise
-media-libs/rubberband
+# media-libs/rnnoise
+# media-libs/rubberband
 
 # Fonts
 media-fonts/cantarell

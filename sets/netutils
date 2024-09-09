@@ -3,10 +3,10 @@ net-analyzer/macchanger
 net-analyzer/nmap
 net-analyzer/traceroute
 net-firewall/nftables
-net-misc/iperf:3
+#net-misc/iperf:3
 net-misc/socat
 net-misc/ntp
 net-analyzer/tcpdump
-net-misc/wol
+#net-misc/wol
 net-misc/whois
 net-dns/bind-tools

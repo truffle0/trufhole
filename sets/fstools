@@ -9,12 +9,12 @@ sys-fs/e2fsprogs
 # Advanced Storage Utils
 net-fs/sshfs
 sys-fs/lvm2
-net-fs/nfs-utils
-sys-fs/mtd-utils
+#net-fs/nfs-utils
+#sys-fs/mtd-utils
 sys-fs/cryptsetup
 sys-fs/quota
-net-ftp/vsftpd
-sys-apps/smartmontools
+#net-ftp/vsftpd
+#sys-apps/smartmontools
 sys-apps/hdparm
 
 # Foreign Filesystem Utils

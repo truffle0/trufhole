@@ -13,7 +13,7 @@ sys-apps/busybox
 @fstools
 
 # Extended Utilities
-www-client/links
+#www-client/links
 
 # Coding & Debugging
 app-misc/binwalk
@@ -21,7 +21,7 @@ dev-vcs/git
 dev-debug/strace
 dev-debug/gdb
 sys-devel/patch
-dev-util/uncrustify
+#dev-util/uncrustify
 
 # Scripting & Parsing
 app-text/tree
@@ -34,12 +34,12 @@ sys-apps/moreutils
 sys-apps/usbutils
 sys-apps/pciutils
 sys-apps/i2c-tools
-sys-process/bashtop
+#sys-process/bashtop
 
 # Special tools
-sys-apps/i2c-tools
-sys-apps/flashrom
+#sys-apps/i2c-tools
+#sys-apps/flashrom
 
 # System Utils
-sys-power/powertop
-sys-apps/lm-sensors
+#sys-power/powertop
+#sys-apps/lm-sensors
