@@ -7,7 +7,7 @@ sys-apps/busybox
 app-shells/zsh
 app-shells/zsh-completions
 app-shells/gentoo-zsh-completions
-app-editor/vim
+app-editors/vim
 
 # Extended Utilities
 media-gfx/imv
@@ -47,5 +47,5 @@ sys-power/powertop
 
 # System Utils
 sys-power/powertop
-sys-power/lm-sensors
+sys-apps/lm-sensors
 sys-apps/ipmiutil

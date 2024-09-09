@@ -10,7 +10,7 @@ sys-fs/e2fsprogs
 net-fs/sshfs
 net-fs/samba
 sys-fs/lvm2
-net-fs/nft-utils
+net-fs/nfs-utils
 sys-fs/mtd-utils
 sys-fs/cryptsetup
 sys-fs/quota

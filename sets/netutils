@@ -9,4 +9,4 @@ net-misc/ntp
 net-analyzer/tcpdump
 net-misc/wol
 net-misc/whois
-net-misc/bind-tools
+net-dns/bind-tools
