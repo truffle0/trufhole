@@ -109,7 +109,7 @@ RDEPEND="
     app-misc/openrgb
     app-misc/openrgb-plugin-effects
     app-misc/openrgb-plugin-skin
-    app-misc/openrgb-visualmap
+    app-misc/openrgb-plugin-visualmap
   )
   virtual-machine? (
     app-emulation/virt-manager
