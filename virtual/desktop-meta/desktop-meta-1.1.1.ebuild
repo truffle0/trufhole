@@ -114,3 +114,4 @@ RDEPEND="
   virtual-machine? (
     app-emulation/virt-manager
   )
+"
