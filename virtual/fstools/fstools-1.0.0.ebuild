@@ -1,0 +1,24 @@
+# Copyright 2022 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+EAPI=8
+
+DESCRIPTION="Virtual for useful filesystem tools"
+
+SLOT="0"
+KEYWORDS="amd64 ~amd64 ~arm"
+IUSE=""
+
+RDEPEND="
+  sys-fs/btrfs-progs
+  sys-fs/dosfstools
+  sys-fs/jfsutils
+  sys-fs/ntfs3g
+  sys-fs/reiserfsprogs
+  sys-fs/xfsprogs
+  sys-fs/e2fsprogs
+  net-fs/sshfs
+  net-fs/samba
+  app-misc/binwalk
+  sys-fs/mtd-utils
+"
