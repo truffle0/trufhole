@@ -4,19 +4,18 @@ gui-apps/swaylock
 gui-apps/swayidle
 gui-apps/swaybg
 
-# Login & Env
-gui-libs/greetd
-gui-apps/tuigreet
+# Login & Auth
 sys-apps/dbus
 sys-auth/seatd
 lxqt-base/lxqt-policykit
+x11-apps/xhost
 
 # Taskbar, Launcher, Notifications
 gui-apps/waybar
 media-sound/playerctl
-gui-apps/wofi
 gui-apps/wob
 x11-misc/dunst
+gui-apps/tofi
 
 # Sound
 media-video/pipewire[pipewire-alsa,jack-sdk,sound-server]
@@ -40,3 +39,4 @@ x11-terms/alacritty
 x11-misc/pcmanfm
 media-gfx/imv
 media-video/mpv
+gui-apps/wdisplays

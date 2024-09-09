@@ -23,6 +23,7 @@ sys-fs/f2fs-tools
 sys-fs/udftools
 sys-fs/exfatprogs
 sys-fs/squashfs-tools
+sys-fs/ntfs3g
 
 # Forensics & Recovery
 app-forensics/foremost

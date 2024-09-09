@@ -22,6 +22,10 @@ www-client/firefox
 # Sys & Net
 net-analyzer/wireshark
 gnome-extra/nm-applet
+net-misc/networkmanager
+
+# Desktop Package Management
+sys-apps/flatpak
 
 # Sound
 media-sound/pavucontrol
