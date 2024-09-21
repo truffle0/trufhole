@@ -1470,7 +1470,7 @@ src_prepare() {
 
 	# musl-specific patches
 	# some scoured from the internet, gentoo-overlays and alpine builds
-	# some I had to be written
+	# some I had to write myself
 	if use elibc_musl ; then
 		PATCHES+=(
 			"${FILESDIR}/musl/allocator_shim_musl_quickfix.patch"
