@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE=""
 
 DEPEND=">=virtual/jdk-1.8
-		dev-java/kotlin
+		virtual/kotlin
 		dev-java/testng
 		dev-java/jcommander
 		dev-java/snakeyaml"
