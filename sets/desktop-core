@@ -13,7 +13,7 @@ net-p2p/transmission
 # net-misc/yt-dlp
 
 # Socials & Gaming
-net-irc/hexchat
+#net-irc/hexchat
 
 # Web
 #www-client/firefox
