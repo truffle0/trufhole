@@ -1,0 +1,7 @@
+# Coding & Debugging
+app-misc/binwalk
+dev-vcs/git
+dev-debug/strace
+dev-debug/lldb
+sys-devel/patch
+#dev-util/uncrustify

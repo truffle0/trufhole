@@ -15,5 +15,5 @@ app-misc/tmux
 # Authentication
 app-admin/sudo
 
-# Literally everything
+# Emergency material
 sys-apps/busybox

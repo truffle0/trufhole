@@ -1,17 +1,7 @@
 @shellset
 @netutils
 @fstools
-
-# Extended Utilities
-#www-client/links
-
-# Coding & Debugging
-app-misc/binwalk
-dev-vcs/git
-dev-debug/strace
-dev-debug/gdb
-sys-devel/patch
-#dev-util/uncrustify
+@codetools
 
 # Scripting & Parsing
 app-text/tree
@@ -24,12 +14,4 @@ sys-apps/moreutils
 sys-apps/usbutils
 sys-apps/pciutils
 sys-apps/i2c-tools
-#sys-process/bashtop
-
-# Special tools
-#sys-apps/i2c-tools
-#sys-apps/flashrom
-
-# System Utils
-#sys-power/powertop
-#sys-apps/lm-sensors
+sys-process/btop

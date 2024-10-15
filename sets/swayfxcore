@@ -1,5 +1,5 @@
 # Core Packages
-gui-wm/sway[-swaybar]
+gui-wm/swayfx[-swaybar]
 gui-apps/swaylock
 gui-apps/swayidle
 gui-apps/swaybg
@@ -35,6 +35,6 @@ gui-libs/xdg-desktop-portal-wlr
 
 # Basic Utilities
 x11-terms/alacritty
-#media-gfx/imv
+media-gfx/imv
 #media-video/mpv
 #gui-apps/wdisplays
