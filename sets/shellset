@@ -4,7 +4,7 @@ app-shells/zsh-completions
 app-shells/gentoo-zsh-completions
 
 # Utilities
-app-shells/zoxide
+app-shells/fzf
 
 # Editor
 app-editors/vim
