@@ -1,0 +1,28 @@
+diff --git a/base/allocator/partition_allocator/src/partition_alloc/shim/allocator_shim_internals.h b/base/allocator/partition_allocator/src/partition_alloc/shim/allocator_shim_internals.h
+index 2c1f2c6..25e1766 100644
+--- a/base/allocator/partition_allocator/src/partition_alloc/shim/allocator_shim_internals.h
++++ b/base/allocator/partition_allocator/src/partition_alloc/shim/allocator_shim_internals.h
+@@ -10,16 +10,16 @@
+ #if defined(__GNUC__)
+ 
+ #if BUILDFLAG(IS_POSIX)
+-#include <sys/cdefs.h>  // for __THROW
++//#include <sys/cdefs.h>  // for __THROW
+ #endif
+ 
+-#ifndef __THROW   // Not a glibc system
+-#ifdef _NOEXCEPT  // LLVM libc++ uses noexcept instead
+-#define __THROW _NOEXCEPT
+-#else
++//#ifndef __THROW   // Not a glibc system
++//#ifdef _NOEXCEPT  // LLVM libc++ uses noexcept instead
++//#define __THROW _NOEXCEPT
++//#else
+ #define __THROW
+-#endif  // !_NOEXCEPT
+-#endif
++//#endif  // !_NOEXCEPT
++//#endif
+ 
+ // Shim layer symbols need to be ALWAYS exported, regardless of component build.
+ //
