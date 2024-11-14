@@ -415,9 +415,9 @@ src_prepare() {
 	# Apply musl-specific patches
 	if use elibc_musl ; then
 		PATCHES+=(
-			"${FILESDIR}/musl/yes-musl.patch",
-			"${FILESDIR}/musl/remove-libatomic.patch",
-			"${FILESDIR}/musl/perfetto-libstdc++.patch",
+			"${FILESDIR}/musl/yes-musl.patch"
+			"${FILESDIR}/musl/remove-libatomic.patch"
+			"${FILESDIR}/musl/perfetto-libstdc++.patch"
 		)
 	fi
 
