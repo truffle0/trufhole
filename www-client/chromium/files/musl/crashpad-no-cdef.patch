@@ -1,0 +1,26 @@
+diff --git a/third_party/crashpad/crashpad/compat/android/sys/mman.h b/third_party/crashpad/crashpad/compat/android/sys/mman.h
+index 200d075..7f392f1 100644
+--- a/third_party/crashpad/crashpad/compat/android/sys/mman.h
++++ b/third_party/crashpad/crashpad/compat/android/sys/mman.h
+@@ -18,7 +18,7 @@
+ #include_next <sys/mman.h>
+ 
+ #include <android/api-level.h>
+-#include <sys/cdefs.h>
++//#include <sys/cdefs.h>
+ 
+ // There’s no mmap() wrapper compatible with a 64-bit off_t for 32-bit code
+ // until API 21 (Android 5.0/“Lollipop”). A custom mmap() wrapper is provided
+diff --git a/third_party/crashpad/crashpad/compat/linux/sys/ptrace.h b/third_party/crashpad/crashpad/compat/linux/sys/ptrace.h
+index 619243b..5866d67 100644
+--- a/third_party/crashpad/crashpad/compat/linux/sys/ptrace.h
++++ b/third_party/crashpad/crashpad/compat/linux/sys/ptrace.h
+@@ -17,7 +17,7 @@
+ 
+ #include_next <sys/ptrace.h>
+ 
+-#include <sys/cdefs.h>
++//#include <sys/cdefs.h>
+ 
+ // https://sourceware.org/bugzilla/show_bug.cgi?id=22433
+ #if !defined(PTRACE_GET_THREAD_AREA) && !defined(PT_GET_THREAD_AREA) && \
