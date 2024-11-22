@@ -323,7 +323,7 @@ CRATES="
 	zxcvbn@2.2.2
 "
 PYTHON_COMPAT=( python3_{9..13} )
-inherit cargo gnome2-utils meson python-single-r1 xdg
+inherit cargo rust-toolchain gnome2-utils meson python-single-r1 xdg
 
 DESCRIPTION="Keep your data safe"
 HOMEPAGE="https://gitlab.gnome.org/World/pika-backup"
@@ -340,8 +340,10 @@ SLOT="0"
 KEYWORDS="~amd64"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
+RUST_MIN_VER="1.75.0"
+
 DEPEND="
-	app-backup/borgbackup
+	>=app-backup/borgbackup-1.4.0
 	app-crypt/libsecret
 	dev-util/itstool
 	>=gui-libs/gtk-4.12.5
@@ -357,7 +359,6 @@ RDEPEND="
 	x11-libs/pango
 "
 BDEPEND="
-	>=virtual/rust-1.75.0
 	dev-util/itstool
 	sys-devel/gettext
 "
