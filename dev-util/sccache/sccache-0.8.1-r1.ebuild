@@ -386,7 +386,7 @@ inherit cargo optfeature systemd
 DESCRIPTION="ccache/distcc like tool with support for rust and cloud storage"
 HOMEPAGE="https://github.com/mozilla/sccache/"
 SRC_URI="
-	https://github.com/mozilla/sccache/archive/v0.8.1.tar.gz
+	https://github.com/mozilla/sccache/archive/v${PV}.tar.gz
 	${CARGO_CRATE_URIS}
 "
 
@@ -402,9 +402,10 @@ IUSE="azure dist-client dist-server gcs memcached redis s3 simple-s3"
 RESTRICT="test"
 REQUIRED_USE="s3? ( simple-s3 )"
 
+RUST_MIN_VER="1.65.0"
+
 BDEPEND="
 	virtual/pkgconfig
-	>=virtual/rust-1.65
 "
 DEPEND="
 	app-arch/zstd
