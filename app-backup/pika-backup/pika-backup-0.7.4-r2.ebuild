@@ -323,7 +323,7 @@ CRATES="
 	zxcvbn@2.2.2
 "
 PYTHON_COMPAT=( python3_{9..13} )
-inherit cargo rust-toolchain gnome2-utils meson python-single-r1 xdg
+inherit cargo rust gnome2-utils meson python-single-r1 xdg
 
 DESCRIPTION="Keep your data safe"
 HOMEPAGE="https://gitlab.gnome.org/World/pika-backup"
@@ -365,6 +365,10 @@ BDEPEND="
 
 # Rust
 QA_FLAGS_IGNORED="usr/bin/${PN} usr/bin/${PN}-monitor"
+
+pkg_setup() {
+	rust_pkg_setup
+}
 
 src_prepare() {
 	mv -T "${WORKDIR}/${PN}-v${PV}"* "${S}" || die
