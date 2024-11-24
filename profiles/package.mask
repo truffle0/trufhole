@@ -1,0 +1,4 @@
+# Bryce (truffle) <truffle074@gmail.com>
+# Masked due to compile/dependency errors
+# will need to be fixed later
+=media-gfx/prusaslicer-2.8.1
