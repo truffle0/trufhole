@@ -2,3 +2,7 @@
 # Masked due to compile/dependency errors
 # will need to be fixed later
 =media-gfx/prusaslicer-2.8.1
+
+# Bryce (truffle) <truffle074@gmail.com>
+# Masked due to issues compiling 
+=app-backup/pika-backup-0.7.4-r2
