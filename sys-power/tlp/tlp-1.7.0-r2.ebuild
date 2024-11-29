@@ -8,7 +8,7 @@ inherit udev optfeature
 DESCRIPTION="Optimize laptop battery life"
 HOMEPAGE="https://linrunner.de/tlp/"
 SRC_URI="https://github.com/linrunner/TLP/archive/refs/tags/${PV}.tar.gz -> ${P}.tar.gz"
-IUSE="-split-usr"
+IUSE="-split-usr systemd elogind"
 S="${WORKDIR}/TLP-${PV}"
 
 LICENSE="GPL-2"
@@ -30,8 +30,8 @@ src_install() {
 		DESTDIR="${D}"
 		TLP_NO_INIT=1
 		TLP_ELOD=/usr/lib/elogind/system-sleep
-		TLP_WITH_ELOGIND=1
-		TLP_WITH_SYSTEMD=1
+		TLP_WITH_ELOGIND=$(usex elogind 1 0)
+		TLP_WITH_SYSTEMD=$(usex systemd 1 0)
 		install install-man
 	)
 	emake "${myemakeargs[@]}"
