@@ -24,7 +24,7 @@ RDEPEND="${DEPEND}"
 BDEPEND=""
 
 LLVM_COMPONENTS=(
-    mlir cmake
+    mlir llvm cmake
 )
 LLVM_USE_TARGETS=llvm
 llvm.org_set_globals
