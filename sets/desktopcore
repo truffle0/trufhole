@@ -7,7 +7,7 @@ app-editors/mousepad
 #gnome-extra/gnome-characters
 #app-text/evince
 #app-office/obsidian
-sci-calculators/qalculate-gtk
+sci-calculators/qalculate-qt
 
 # File Apps
 gnome-extra/nemo
@@ -16,7 +16,6 @@ net-p2p/transmission
 # net-misc/yt-dlp
 
 # Socials
-#net-irc/hexchat
 net-irc/senpai
 
 # Web
