@@ -1,7 +1,0 @@
-# Basic System Daemons
-sys-process/cronie
-sys-process/at
-sys-power/thermald
-net-misc/chrony
-app-admin/sysklogd
-sys-apps/lm-sensors

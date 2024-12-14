@@ -1,7 +1,0 @@
-# All nettools
-net-analyzer/macchanger
-net-analyzer/nmap
-net-analyzer/traceroute
-net-firewall/nftables
-net-misc/socat
-net-misc/whois
