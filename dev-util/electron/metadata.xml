@@ -2,7 +2,8 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 	<maintainer type="person">
-		<email>PF4Public@users.noreply.github.com</email>
+		<name>truffle</name>
+		<email>truffle074@gmail.com</email>
 	</maintainer>
 	<upstream>
 		<remote-id type="github">electron/electron</remote-id>
@@ -10,7 +11,8 @@
 		<doc>https://www.electronjs.org/docs</doc>
 	</upstream>
 	<longdescription>
-		Electron is a cross platform application development framework based on web technologies based on Chromium
+		Electron is a cross platform application development framework based on web technologies based on Chromium.
+		Originally from the PF4Public overlay at: https://github.com/PF4Public/gentoo-overlay
 	</longdescription>
 	<use>
 		<flag name="bluetooth">Enable Bluetooth. Disabling bluetooth does break WebAuthn. Could also break something else. Improved patch is welcome.</flag>
