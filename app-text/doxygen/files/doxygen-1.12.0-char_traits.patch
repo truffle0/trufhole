@@ -1,0 +1,51 @@
+Upstream discussion thread at https://github.com/doxygen/doxygen/issues/10928
+for issues with the new libc++ change that deprecates the use of the 'unsigned char' type
+with the char_traits base template.
+
+this patch is adaptation of the proposed patch from debohman, in this comment:
+https://github.com/doxygen/doxygen/issues/10928#issuecomment-2566016620
+
+the version being discussed is 1.13.0, however a simple version bump doesn't seem to fix this issue
+and applying the patch directly introduces other issues.
+
+this is a temporary fix that recasts the JAVA_CC_EXTRA_FLAGS variable as a 'char', which is accepted by
+the char_traits template. the more correct option would be to use char8_t, however this type does not
+exist in c++17 and would require changing to c++20 (this causes some issues with consteval functions, due to unrelated changes)
+
+the latter part is necessary as redefining this variable causes some functions in
+the QCString class to have duplicate signatures
+
+index e8bea86bd..d2bb3d05b 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -177,7 +177,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "Windows")
+ endif()
+ 
+ # needed for JavaCC
+-set(JAVA_CC_EXTRA_FLAGS "-DJAVACC_CHAR_TYPE=\"unsigned char\"")
++set(JAVA_CC_EXTRA_FLAGS "-DJAVACC_CHAR_TYPE=\"char\"")
+ set(CMAKE_CXX_FLAGS       "${CMAKE_CXX_FLAGS}       ${JAVA_CC_EXTRA_FLAGS}")
+ set(CMAKE_CXX_FLAGS_DEBUG "${CMAKE_CXX_FLAGS_DEBUG} ${JAVA_CC_EXTRA_FLAGS}")
+ 
+
+index 20cda6166..0f20e121b 100644
+--- a/src/qcstring.h
++++ b/src/qcstring.h
+@@ -101,7 +101,7 @@ class QCString
+ {
+   public:
+     QCString() = default;
+-    explicit QCString( const std::string &s ) : m_rep(s) {}
++    //explicit QCString( const std::string &s ) : m_rep(s) {}
+ 
+     QCString( std::string &&s) : m_rep(std::move(s)) {}
+ 
+@@ -144,7 +144,7 @@ class QCString
+     /** replaces the contents by that of C string \a str. */
+     QCString &operator=( const char *str) { m_rep = str?str:""; return *this; }
+ 
+-    QCString &operator=( const std::string &s) { m_rep = s; return *this; }
++    //QCString &operator=( const std::string &s) { m_rep = s; return *this; }
+ 
+     /** Returns TRUE iff the string is empty */
+     bool isEmpty() const { return m_rep.empty(); }
