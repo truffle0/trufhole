@@ -1,0 +1,26 @@
+original code here uses the internal glibc type __fsword_t (specifically marked to not use in the docs)
+this type doesn't use the same name in musl
+
+there is a more general upstream patch available that works in a more general case
+however this patch will work for musl specifically by switching out the undefined type
+for long (which musl ultimately resolves (struct statfs).f_type to)
+
+diff --git a/sal/osl/unx/file.cxx b/sal/osl/unx/file.cxx
+index ee7412d..581863e 100644
+--- a/sal/osl/unx/file.cxx
++++ b/sal/osl/unx/file.cxx
+@@ -66,10 +66,10 @@
+ 
+ #ifdef LINUX
+ #include <sys/vfs.h>
+-// As documented by the kernel
+-#define SMB_SUPER_MAGIC  static_cast<__fsword_t>(0x517B)
+-#define CIFS_SUPER_MAGIC static_cast<__fsword_t>(0xFF534D42)
+-#define SMB2_SUPER_MAGIC static_cast<__fsword_t>(0xFE534D42)
++// musl ultimately resolves (struct statfs).f_type to 'long'
++#define SMB_SUPER_MAGIC  static_cast<long>(0x517B)
++#define CIFS_SUPER_MAGIC static_cast<long>(0xFF534D42)
++#define SMB2_SUPER_MAGIC static_cast<long>(0xFE534D42)
+ #endif
+ 
+ namespace {
