@@ -47,6 +47,7 @@ RDEPEND=">=app-arch/brotli-1.0.9:=
 		>=dev-libs/openssl-1.1.1:0=
 	)
 	!system-ssl? ( >=net-libs/ngtcp2-1.3.0:=[-gnutls] )
+	!elibc_musl? ( sys-devel/gcc:* )
 "
 BDEPEND="${PYTHON_DEPS}
 	app-alternatives/ninja
@@ -106,12 +107,13 @@ src_prepare() {
 	fi
 
 	# We need to disable mprotect on two files when it builds Bug 694100.
-	use pax-kernel && PATCHES+=( "${FILESDIR}"/${PN}-20.6.0-paxmarking.patch )
+	use pax-kernel && PATCHES+=( "${FILESDIR}"/${PN}-22.12.0-paxmarking.patch )
 
 	# bug 931256
 	use riscv && PATCHES+=( "${FILESDIR}"/${PN}-22.2.0-riscv.patch )
 
-	[[ ${ELIBC} == "musl" ]] && PATCHES+=( "${FILESDIR}/${PN}-22.8.0-no-libatomic.patch" )
+	# disable libatomic to remove gcc dependency (for musl systems)
+	use elibc_musl && PATCHES+=( "${FILESDIR}/${PN}-22.8.0-no-libatomic.patch" )
 
 
 	default
