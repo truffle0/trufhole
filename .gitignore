@@ -1,2 +1,5 @@
+# not need to sync metadata and timestamp information, gentoo-mirror does this automatically
+# if cloning directly, use `egencache --update --repo trufhole` to manually generate it
 metadata/cache/
 metadata/md5-cache/
+metadata/timestamp*
