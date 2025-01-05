@@ -379,7 +379,7 @@ src_unpack() {
 
 src_prepare() {
 	# musl compatibility patch
-	use elibc_musl && PATCHES+="${FILESDIR}/${PN}-24.2.7.2-musl-ftype.patch"
+	use elibc_musl && PATCHES+=("${FILESDIR}/${PN}-24.2.7.2-musl-ftype.patch")
 
 	default
 
