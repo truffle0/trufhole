@@ -1,0 +1,13 @@
+makes the Eigen package version selection less pedantic, gentoo only has >3.4.0 now so 3.3.7 is not going to happen
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -374,7 +374,7 @@ set(MINIMUM_BOOST_VERSION "1.66.0")
+ set(_boost_components "system;filesystem;thread;log;locale;regex;chrono;atomic;date_time;iostreams;nowide")
+ find_package(Boost ${MINIMUM_BOOST_VERSION} REQUIRED COMPONENTS ${_boost_components})
+ 
+-find_package(Eigen3 3.3.7 REQUIRED)
++find_package(Eigen3 REQUIRED)
+ 
+ add_library(boost_libs INTERFACE)
+ add_library(boost_headeronly INTERFACE)
