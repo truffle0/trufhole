@@ -1,0 +1,23 @@
+fixes libjvm.so error when building using clang 13+
+patch from freebsd: https://github.com/battleblow/jdk11u/commit/305a68a90c722aa7a7b75589e24d5b5d554c96c1
+via: https://bugs.gentoo.org/817995#c10
+
+original solution is to backport the fix from openjdk-14, using this patch:
+https://github.com/openjdk/jdk11u/pull/23/commits/f4a05f68ef4223993fd47896a806c8a49df7db71
+
+however the above patch is very large and may interfere with other fixes, better to go with less changes
+
+diff --git a/src/hotspot/share/oops/markOop.hpp b/src/hotspot/share/oops/markOop.hpp
+index 649217c880..97f9a2d7e2 100644
+--- a/src/hotspot/share/oops/markOop.hpp
++++ b/src/hotspot/share/oops/markOop.hpp
+@@ -104,6 +104,9 @@ class JavaThread;
+ class markOopDesc: public oopDesc {
+  private:
+   // Conversion
++#if defined(__clang_major__) && (__clang_major__ >= 13)
++  NOINLINE
++#endif
+   uintptr_t value() const { return (uintptr_t) this; }
+ 
+  public:

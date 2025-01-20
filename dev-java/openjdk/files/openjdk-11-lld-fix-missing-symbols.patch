@@ -1,0 +1,35 @@
+Fix from related FreeBSD bug: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=274109
+lld gets upset with certain non-existent symbols
+diff --git a/make/hotspot/lib/JvmMapfile.gmk b/make/hotspot/lib/JvmMapfile.gmk
+index ba44e57983..f4cc8993a8 100644
+--- a/make/hotspot/lib/JvmMapfile.gmk
++++ b/make/hotspot/lib/JvmMapfile.gmk
+@@ -65,7 +65,7 @@ endif
+ # platform dependent.
+
+ ifeq ($(call isTargetOs, linux), true)
+-  DUMP_SYMBOLS_CMD := $(NM) --defined-only *.o
++  DUMP_SYMBOLS_CMD := $(NM) --extern-only --defined-only *.o
+   ifneq ($(FILTER_SYMBOLS_PATTERN), )
+     FILTER_SYMBOLS_PATTERN := $(FILTER_SYMBOLS_PATTERN)|
+   endif
+
+
+Referenced in upstream backport request: https://bugs.openjdk.org/browse/JDK-8296970
+
+"sysThreadAvailableStackWithSlack" relates to an "ancient function in os_solaris.cpp",
+it unused in most normal implementation and causes link errors using new versions of lld
+
+change has been backported to newer versions, but still applies when trying to build openjdk:11 with
+newer versions of LLVM.
+Unsure of exact LLVM version where this issue starts, but shouldn't hurt to remove barnacles
+
+diff --git a/make/hotspot/symbols/symbols-linux b/make/hotspot/symbols/symbols-linux
+index bbb0d35115..b0d802f177 100644
+--- a/make/hotspot/symbols/symbols-linux
++++ b/make/hotspot/symbols/symbols-linux
+@@ -25,4 +25,3 @@ JVM_handle_linux_signal
+ JVM_IsUseContainerSupport
+ numa_error
+ numa_warn
+-sysThreadAvailableStackWithSlack
