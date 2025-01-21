@@ -57,7 +57,7 @@ IUSE="alsa big-endian cups debug doc examples headless-awt javafx +jbootstrap lt
 REQUIRED_USE="
 	javafx? ( alsa !headless-awt )
 	!system-bootstrap? ( jbootstrap )
-	elibc_musl ( system-bootstrap !jbootstrap )
+	elibc_musl ( system-bootstrap )
 "
 
 COMMON_DEPEND="
@@ -159,9 +159,12 @@ src_prepare() {
 		# apply alpine aports patches that fix general musl compatibility issues
 		PATCHES+=(
 			"${FILESDIR}/${PN}-11-alpine-JDK-8267908.patch" # upstream patch for thread_native_entry
-			"${FILESDIR}/${PN}-11-alpine-lfs64.patch" # remove the need for -DLARGEFILE64_SOURCE
-			"${FILESDIR}/${PN}-11-alpine-ppc64le.patch" # uc_mcontext.regs->grp to uc_mcontext.gp_regs
+			#"${FILESDIR}/${PN}-11-alpine-lfs64.patch" # remove the need for -DLARGEFILE64_SOURCE
+			#"${FILESDIR}/${PN}-11-alpine-ppc64le.patch" # uc_mcontext.regs->grp to uc_mcontext.gp_regs, for ppc64
 		)
+
+		# remove jdk.hotspot.agent module, which requires glibc's libthread_db.h
+		# rm -r "${S}/src/jdk.hotspot.agent"
 
 		# fixes issues related to the use of NULL (musl & glibc definitions differ)
 		PATCHES+=( "${FILESDIR}/openjdk-11-musl-fix-reinterpret-cast.patch" )
@@ -190,6 +193,9 @@ src_configure() {
 
 	# Work around stack alignment issue, bug #647954.
 	use x86 && append-flags -mincoming-stack-boundary=2
+
+	# bug 906987; append-cppflags doesnt work
+	use elibc_musl && append-flags -D_LARGEFILE64_SOURCE
 
 	# Strip some flags users may set, but should not. #818502
 	filter-flags -fexceptions
