@@ -57,7 +57,7 @@ IUSE="alsa big-endian cups debug doc examples headless-awt javafx +jbootstrap lt
 REQUIRED_USE="
 	javafx? ( alsa !headless-awt )
 	!system-bootstrap? ( jbootstrap )
-	elibc_musl ( system-bootstrap -jbootstrap )
+	elibc_musl ( system-bootstrap !jbootstrap )
 "
 
 COMMON_DEPEND="
