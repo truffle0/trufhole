@@ -1,0 +1,14 @@
+diff --git a/sys/v4l2/gstv4l2object.h b/sys/v4l2/gstv4l2object.h
+index 2e8d926..36f30f5 100644
+--- a/sys/v4l2/gstv4l2object.h
++++ b/sys/v4l2/gstv4l2object.h
+@@ -26,6 +26,9 @@
+ 
+ #include "ext/videodev2.h"
+ #ifdef HAVE_LIBV4L2
++#if defined(__linux__) && !defined(__GLIBC__)
++#define HAVE_POSIX_IOCTL
++#endif
+ #  include <libv4l2.h>
+ #endif
+ 

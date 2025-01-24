@@ -23,7 +23,7 @@ DEPEND="${RDEPEND}
 GST_PLUGINS_ENABLED="v4l2"
 
 src_prepare() {
-	use elibc_musl && eapply "${FILESDIR}/v4l2-1.24.11-fix-incorrect-function-type.patch"
+	use elibc_musl && eapply "${FILESDIR}/have-posix-ioctl.patch"
 	default
 }
 
