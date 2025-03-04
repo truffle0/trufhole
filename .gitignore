@@ -3,3 +3,6 @@
 metadata/cache/
 metadata/md5-cache/
 metadata/timestamp*
+
+# vim for the cool kids
+*.swp
