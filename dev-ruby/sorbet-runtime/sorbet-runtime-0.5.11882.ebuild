@@ -9,6 +9,6 @@ inherit ruby-fakegem
 DESCRIPTION="Sorbet's runtime static type checker component"
 HOMEPAGE="https://sorbet.org/"
 
-LICENSE="MIT"
+LICENSE="Apache-2.0"
 SLOT="0"
 KEYWORDS="~amd64"
