@@ -1,0 +1,14 @@
+#!/sbin/openrc-run
+# Copyright 1999-2019 Gentoo Authors
+# Distributed under the terms of the GNU General Public License v2
+
+command="dns_cacher"
+command_args="-D"
+
+pidfile=${DNS_CACHER_PIDFILE:-/run/${RC_SVCNAME}.pid}
+start_stop_daemon_args="--make-pidfile --pidfile=${pidfile}"
+
+depend() {
+	provide dns
+}
+
