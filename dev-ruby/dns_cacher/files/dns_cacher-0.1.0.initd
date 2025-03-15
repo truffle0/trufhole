@@ -6,7 +6,7 @@ command="dns_cacher"
 command_args="-D"
 
 pidfile=${DNS_CACHER_PIDFILE:-/run/${RC_SVCNAME}.pid}
-start_stop_daemon_args="--make-pidfile --pidfile=${pidfile}"
+start_stop_daemon_args="--make-pidfile --pidfile=${pidfile} --background"
 
 depend() {
 	provide dns
