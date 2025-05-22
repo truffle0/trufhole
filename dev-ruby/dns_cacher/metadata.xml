@@ -7,6 +7,6 @@
 	</maintainer>
 	<upstream>
 		<bugs-to>https://github.com/truffle0/dns_cacher/issues</bugs-to>
-		<remote-id type="github">truffle0/dns_cacher</remote-id>
+		<remote-id type="gitea">https://git.b0tt0m.xyz/truffle/dns_cacher</remote-id>
 	</upstream>
 </pkgmetadata>
