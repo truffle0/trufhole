@@ -1,0 +1,43 @@
+below patch is almost the same as original, but current version
+has moved this code to different locations so addresses have been
+adjusted
+
+commit 77fdabaebe1db7ac3af8f7ab6ec75e143982b4d4
+Author: q66 <q66@chimera-linux.org>
+Date:   Fri Apr 21 18:47:37 2023 +0200
+
+    drop -latomic (none in pure-llvm env)
+
+diff --git a/node.gyp b/node.gyp
+index 677ccdcafd..df60c017ad 100644
+--- a/node.gyp
++++ b/node.gyp
+@@ -497,9 +497,6 @@
+           '-Wl,-bnoerrmsg',
+         ],
+       }],
+-      ['OS=="linux" and clang==1', {
+-        'libraries': ['-latomic'],
+-      }],
+     ],
+   },
+ 
+diff --git a/tools/v8_gypfiles/v8.gyp b/tools/v8_gypfiles/v8.gyp
+index 3ea5564d54..9b13c2d876 100644
+--- a/tools/v8_gypfiles/v8.gyp
++++ b/tools/v8_gypfiles/v8.gyp
+@@ -1305,14 +1305,6 @@
+         ['v8_postmortem_support', {
+           'dependencies': ['postmortem-metadata#target'],
+         }],
+-        # Platforms that don't have Compare-And-Swap (CAS) support need to link atomic library
+-        # to implement atomic memory access.
+-        # Clang needs it for some atomic operations (https://clang.llvm.org/docs/Toolchain.html#atomics-library).
+-        ['(OS=="linux" and clang==1) or (v8_current_cpu in ["mips64", "mips64el", "arm", "riscv64", "loong64"])', {
+-          'link_settings': {
+-            'libraries': ['-latomic', ],
+-          },
+-        }],
+       ],
+     },  # v8_base_without_compiler
+     {
