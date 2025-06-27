@@ -1,0 +1,13 @@
+diff --git a/make/autoconf/toolchain.m4 b/make/autoconf/toolchain.m4
+index 7a24815d1..9b20d7fda 100644
+--- a/make/autoconf/toolchain.m4
++++ b/make/autoconf/toolchain.m4
+@@ -811,7 +811,7 @@ AC_DEFUN_ONCE([TOOLCHAIN_DETECT_TOOLCHAIN_EXTRA],
+       if test "x$OPENJDK_TARGET_OS" = xaix; then
+         UTIL_REQUIRE_TOOLCHAIN_PROGS(CXXFILT, ibm-llvm-cxxfilt)
+       else
+-        UTIL_REQUIRE_TOOLCHAIN_PROGS(CXXFILT, c++filt)
++        UTIL_LOOKUP_TOOLCHAIN_PROGS(CXXFILT, c++filt cxxfilt)
+       fi
+       ;;
+   esac
