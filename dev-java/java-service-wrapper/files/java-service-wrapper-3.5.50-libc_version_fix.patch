@@ -1,0 +1,22 @@
+removes the dependency on gnu/libc-version.h, which isn't present on musl systems
+
+diff --git a/src/c/logger.c b/src/c/logger.c
+--- a/src/c/logger.c
++++ b/src/c/logger.c
+@@ -78,7 +78,6 @@ typedef long intptr_t;
+   #include <errno.h>
+  #else /* LINUX */
+   #include <asm/errno.h>
+-  #include <gnu/libc-version.h>
+  #endif
+ 
+ #endif
+@@ -4149,7 +4148,7 @@ int wrapperAssertGlibcUserBis(unsigned int maj, unsigned int min, unsigned int r
+ 
+     TCHAR versionW[10];
+     
+-    mbstowcs(versionW, gnu_get_libc_version(), 10);
++    mbstowcs(versionW, "0.0.0", 10);
+     _stscanf(versionW, TEXT("%d.%d.%d"), &vmaj, &vmin, &vrev);
+     return ((vmaj == maj && vmin == min &&  vrev >= rev) || (vmaj == maj && vmin > min) || vmaj > maj);
+ }
