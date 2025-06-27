@@ -1,0 +1,19 @@
+Fix from related FreeBSD bug: https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=274109
+lld gets upset with certain non-existent symbols
+
+Remade as original patch for openjdk 11 doesn't work with 17 or 21
+
+Same issue also found in bug #922147
+diff --git a/make/hotspot/lib/JvmMapfile.gmk b/make/hotspot/lib/JvmMapfile.gmk
+index 2808ac2af03..bdf7515eb02 100644
+--- a/make/hotspot/lib/JvmMapfile.gmk
++++ b/make/hotspot/lib/JvmMapfile.gmk
+@@ -53,7 +53,7 @@ endif
+ # platform dependent.
+ 
+ ifeq ($(call isTargetOs, linux), true)
+-  DUMP_SYMBOLS_CMD := $(NM) $(NMFLAGS) --defined-only *$(OBJ_SUFFIX)
++  DUMP_SYMBOLS_CMD := $(NM) $(NMFLAGS) --defined-only --extern-only *$(OBJ_SUFFIX)
+   ifneq ($(FILTER_SYMBOLS_PATTERN), )
+     FILTER_SYMBOLS_PATTERN := $(FILTER_SYMBOLS_PATTERN)|
+   endif
