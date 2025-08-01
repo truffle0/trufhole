@@ -73,6 +73,7 @@ PATCHES=(
 
 	"${FILESDIR}/${PN}-2.8.1-fix-eigen-dependency.patch"
 	"${FILESDIR}/${PN}-2.8.1-datastore-template-fix.patch"
+	"${FILESDIR}/${PN}-2.8.1-serial-unistd-fix.patch"
 )
 
 src_prepare() {
@@ -87,8 +88,6 @@ src_prepare() {
 
 	# remove broken cmake find file: https://github.com/prusa3d/PrusaSlicer/issues/13608
 	rm cmake/modules/FindEigen3.cmake || die
-
-	use elibc_musl && PATCHES+=("${FILESDIR}/${PN}-2.8.0-serial-unistd-musl-fix.patch")
 
 	cmake_src_prepare
 }
