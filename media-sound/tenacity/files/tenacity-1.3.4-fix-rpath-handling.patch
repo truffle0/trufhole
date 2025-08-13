@@ -1,0 +1,17 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 345b4ca47..883a097bf 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -363,9 +363,9 @@ set( _MODDIR "${_DEST}/modules" )
+ set( _EXEDIR "${_DEST}" )
+ 
+ # Setup RPATH handling
+-set( CMAKE_BUILD_RPATH "${_DEST}/${_PKGLIB}" )
+-set( CMAKE_BUILD_WITH_INSTALL_RPATH FALSE )
+-set( CMAKE_INSTALL_RPATH "$ORIGIN/../${_PKGLIB}" )
++set( CMAKE_BUILD_RPATH "${INSTALL_PREFIX}/${_PKGLIB}" )
++set( CMAKE_BUILD_WITH_INSTALL_RPATH TRUE )
++set( CMAKE_INSTALL_RPATH "${INSTALL_PREFIX}/${_PKGLIB}" )
+ set( CMAKE_INSTALL_RPATH_USE_LINK_PATH FALSE )
+ 
+ # Adjust them for the Mac
