@@ -1,3 +1,7 @@
+The install path for the README and LICENSE files is hardcoded to
+"/usr/share/doc/tenacity", change this to use the INSTALL_DOCDIR
+defined by cmake.eclass
+
 diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
 index 61e61f597..4359bccf7 100644
 --- a/src/CMakeLists.txt
