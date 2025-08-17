@@ -23,9 +23,9 @@ DEPEND="
 RDEPEND="
 	${DEPEND}
 "
-#PDEPEND="
-#	>=llvm-runtimes/flang-rt-${PV}:${LLVM_MAJOR}
-#"
+PDEPEND="
+	>=llvm-runtimes/flang-rt-${PV}:${LLVM_MAJOR}
+"
 BDEPEND="
 	clang? ( llvm-core/clang )
 	test? (
