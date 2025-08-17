@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
+	<maintainer type="person">
+		<name>truffle</name>
+		<email>truffle@b0tt0m.xyz</email>
+		<description>this repository only</description>
+	</maintainer>
 	<maintainer type="project">
 		<email>toolchain@gentoo.org</email>
 		<name>Gentoo Toolchain Project</name>
