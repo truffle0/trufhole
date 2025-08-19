@@ -5,7 +5,7 @@ EAPI=8
 
 WX_GTK_VER="3.2-gtk3"
 
-inherit cmake wxwidgets virtualx
+inherit cmake wxwidgets xdg virtualx
 
 # libnyquist doesn't have tags, instead use the specific submodule commit tenacity does
 LIBNYQUIST_COMMIT="d4fe08b079538a2fd79277ef1a83434663562f04"
@@ -23,6 +23,11 @@ SLOT="0"
 KEYWORDS="~amd64"
 
 IUSE="alsa ffmpeg +midi +lame +id3tag +mp3 +mp2 +flac +ogg +vorbis +sbsms +soundtouch +ladspa +lv2 vamp +vst2"
+REQUIRED_USE="
+	id3tag? ( mp3 )
+	lame? ( mp3 )
+	vorbis? ( ogg )
+"
 
 DEPEND="
 	dev-libs/glib:2
@@ -64,6 +69,11 @@ DEPEND="
 "
 RDEPEND="${DEPEND}"
 
+PATCHES=(
+	"${FILESDIR}/tenacity-1.3.4-fix-rpath-handling.patch"
+	"${FILESDIR}/tenacity-1.3.4-fix-hardcoded-docdir.patch"
+)
+
 src_unpack() {
 	default
 
@@ -72,24 +82,20 @@ src_unpack() {
 	ln -s "${WORKDIR}/libnyquist" "${S}/lib-src/libnyquist"
 }
 
-src_prepare() {
-	cmake_src_prepare
-}
-
 src_configure() {
 	setup-wxwidgets
 
 	local mycmakeargs=(
 		-DVCPKG=OFF
+		-DPERFORM_CODESIGN=OFF
 
-		# this is handled separately
+		# portage handles this, specify off to stop autodetect
 		-DSCCACHE=OFF
 		-DCCACHE=OFF
 
-		# Pre-Compiled Headers needs to stay off, even with ccache
-		# otherwise it causes missing definitions
+		# Pre-Compiled Headers needs to stay off, even with ccache installed
+		# otherwise a bunch of preprocessor variables will be missing
 		-DPCH=OFF
-		-DPERFORM_CODESIGN=OFF
 
 		-DMIDI=$(usex midi ON OFF)
 		-DID3TAG=$(usex id3tag ON OFF)
@@ -107,8 +113,10 @@ src_configure() {
 		-DVAMP=$(usex vamp ON OFF)
 		-DVST2=$(usex vst2 ON OFF)
 
-		# TODO: 'doc' use flag
-		#-DMANUAL_PATH=$(usex doc PATH)
+		# this flag is misleading, when not "" the flag only has an effect
+		# when CMAKE_GENERATOR is "Visual Studio*" or "XCode" (i.e. not us)
+		# man pages will be installed regardless on linux
+		-DMANUAL_PATH=""
 	)
 
 	cmake_src_configure
